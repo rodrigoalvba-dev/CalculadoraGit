@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
 using System.Media;
-using CSCore; 
-
 namespace Calculadora.Formularios
 {
     public partial class FrmTemporizador : Form
@@ -39,7 +30,7 @@ namespace Calculadora.Formularios
 
         }
 
-      
+
 
         private void labelHora_Click(object sender, EventArgs e)
         {
