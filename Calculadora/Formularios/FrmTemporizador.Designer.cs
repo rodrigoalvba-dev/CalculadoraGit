@@ -34,9 +34,6 @@
             menuStrip1 = new MenuStrip();
             establecerToolStripMenuItem = new ToolStripMenuItem();
             mIalarma1 = new ToolStripMenuItem();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -83,48 +80,18 @@
             mIalarma1.Text = "Alarma 1";
             mIalarma1.Click += mIalarma1_Click;
             // 
-            // button1
-            // 
-            button1.Location = new Point(38, 244);
-            button1.Name = "button1";
-            button1.Size = new Size(133, 36);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(197, 244);
-            button2.Name = "button2";
-            button2.Size = new Size(109, 36);
-            button2.TabIndex = 3;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(355, 247);
-            button3.Name = "button3";
-            button3.Size = new Size(106, 33);
-            button3.TabIndex = 4;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
-            // 
             // FrmTemporizador
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(640, 360);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(labelHora);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Margin = new Padding(2);
             Name = "FrmTemporizador";
             Text = "Reloj";
+            Load += FrmTemporizador_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -138,8 +105,5 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem establecerToolStripMenuItem;
         private ToolStripMenuItem mIalarma1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
     }
 }

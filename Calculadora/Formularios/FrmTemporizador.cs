@@ -39,10 +39,7 @@ namespace Calculadora.Formularios
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void labelHora_Click(object sender, EventArgs e)
         {
@@ -50,6 +47,11 @@ namespace Calculadora.Formularios
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmTemporizador_Load(object sender, EventArgs e)
         {
 
         }
