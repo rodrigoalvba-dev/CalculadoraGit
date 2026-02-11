@@ -38,7 +38,7 @@
             registroToolStripMenuItem = new ToolStripMenuItem();
             temporizadoresToolStripMenuItem = new ToolStripMenuItem();
             relojToolStripMenuItem = new ToolStripMenuItem();
-            cronometroToolStripMenuItem = new ToolStripMenuItem();
+            editorToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -70,7 +70,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSImpleToolStripMenuItem, burbujaToolStripMenuItem, registroToolStripMenuItem, temporizadoresToolStripMenuItem, cronometroToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSImpleToolStripMenuItem, burbujaToolStripMenuItem, registroToolStripMenuItem, temporizadoresToolStripMenuItem, editorToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(107, 24);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -114,16 +114,16 @@
             // relojToolStripMenuItem
             // 
             relojToolStripMenuItem.Name = "relojToolStripMenuItem";
-            relojToolStripMenuItem.Size = new Size(224, 26);
+            relojToolStripMenuItem.Size = new Size(126, 26);
             relojToolStripMenuItem.Text = "Reloj";
             relojToolStripMenuItem.Click += relojToolStripMenuItem_Click;
             // 
-            // cronometroToolStripMenuItem
+            // editorToolStripMenuItem
             // 
-            cronometroToolStripMenuItem.Name = "cronometroToolStripMenuItem";
-            cronometroToolStripMenuItem.Size = new Size(224, 26);
-            cronometroToolStripMenuItem.Text = "cronometro";
-            cronometroToolStripMenuItem.Click += cronometroToolStripMenuItem_Click;
+            editorToolStripMenuItem.Name = "editorToolStripMenuItem";
+            editorToolStripMenuItem.Size = new Size(224, 26);
+            editorToolStripMenuItem.Text = "Editor";
+            editorToolStripMenuItem.Click += editorToolStripMenuItem_Click;
             // 
             // Menu
             // 
@@ -132,7 +132,7 @@
             ClientSize = new Size(640, 360);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Menu";
             Text = "FormMenu";
             menuStrip1.ResumeLayout(false);
@@ -153,6 +153,6 @@
         private ToolStripMenuItem registroToolStripMenuItem;
         private ToolStripMenuItem temporizadoresToolStripMenuItem;
         private ToolStripMenuItem relojToolStripMenuItem;
-        private ToolStripMenuItem cronometroToolStripMenuItem;
+        private ToolStripMenuItem editorToolStripMenuItem;
     }
 }

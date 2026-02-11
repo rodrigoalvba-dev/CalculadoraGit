@@ -50,8 +50,14 @@ namespace Calculadora
 
         private void cronometroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrCronometro cronometro = new FrCronometro();   
+            FrCronometro cronometro = new FrCronometro();
             cronometro.Show();
+        }
+
+        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrEDitor frEditor=new FrEDitor();
+            frEditor.Show();  
         }
     }
 }
