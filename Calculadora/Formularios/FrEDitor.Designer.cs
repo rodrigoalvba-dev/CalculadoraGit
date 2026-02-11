@@ -31,14 +31,14 @@
             menuStrip1 = new MenuStrip();
             activosToolStripMenuItem = new ToolStripMenuItem();
             nuevoToolStripMenuItem = new ToolStripMenuItem();
-            guardarToolStripMenuItem = new ToolStripMenuItem();
+            abriroolStripMenuItem = new ToolStripMenuItem();
             guardarToolStripMenuItem1 = new ToolStripMenuItem();
             guardarComoToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             salirToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
-            OFPEditor = new OpenFileDialog();
-            SVFileDialog = new SaveFileDialog();
+            OFP = new OpenFileDialog();
+            SFD = new SaveFileDialog();
             richTextBox1 = new RichTextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -55,7 +55,7 @@
             // 
             // activosToolStripMenuItem
             // 
-            activosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevoToolStripMenuItem, guardarToolStripMenuItem, guardarToolStripMenuItem1, guardarComoToolStripMenuItem, toolStripSeparator1, salirToolStripMenuItem });
+            activosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevoToolStripMenuItem, abriroolStripMenuItem, guardarToolStripMenuItem1, guardarComoToolStripMenuItem, toolStripSeparator1, salirToolStripMenuItem });
             activosToolStripMenuItem.Name = "activosToolStripMenuItem";
             activosToolStripMenuItem.Size = new Size(75, 24);
             activosToolStripMenuItem.Text = "Activos ";
@@ -65,19 +65,21 @@
             nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             nuevoToolStripMenuItem.Size = new Size(189, 26);
             nuevoToolStripMenuItem.Text = "Nuevo";
+            nuevoToolStripMenuItem.Click += nuevoToolStripMenuItem_Click;
             // 
-            // guardarToolStripMenuItem
+            // abriroolStripMenuItem
             // 
-            guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            guardarToolStripMenuItem.Size = new Size(189, 26);
-            guardarToolStripMenuItem.Text = "Abrir";
-            guardarToolStripMenuItem.Click += guardarToolStripMenuItem_Click;
+            abriroolStripMenuItem.Name = "abriroolStripMenuItem";
+            abriroolStripMenuItem.Size = new Size(189, 26);
+            abriroolStripMenuItem.Text = "Abrir";
+            abriroolStripMenuItem.Click += guardarToolStripMenuItem_Click;
             // 
             // guardarToolStripMenuItem1
             // 
             guardarToolStripMenuItem1.Name = "guardarToolStripMenuItem1";
-            guardarToolStripMenuItem1.Size = new Size(224, 26);
+            guardarToolStripMenuItem1.Size = new Size(189, 26);
             guardarToolStripMenuItem1.Text = "Guardar";
+            guardarToolStripMenuItem1.Click += guardarToolStripMenuItem1_Click;
             // 
             // guardarComoToolStripMenuItem
             // 
@@ -106,13 +108,13 @@
             statusStrip1.TabIndex = 1;
             statusStrip1.Text = "statusStrip1";
             // 
-            // OFPEditor
+            // OFP
             // 
-            OFPEditor.Filter = "\"Archivo de Texto\"|*.txt";
+            OFP.Filter = "\"Archivo de Texto\"|*.txt";
             // 
-            // SVFileDialog
+            // SFD
             // 
-            SVFileDialog.Filter = "\"Archivo de Texto\"|*.txt";
+            SFD.Filter = "\"Archivo de Texto\"|*.txt";
             // 
             // richTextBox1
             // 
@@ -121,7 +123,8 @@
             richTextBox1.Size = new Size(800, 409);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "";
-            //             // FrEDitor
+            // 
+            // FrEDitor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -143,13 +146,13 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem activosToolStripMenuItem;
         private ToolStripMenuItem nuevoToolStripMenuItem;
-        private ToolStripMenuItem guardarToolStripMenuItem;
+        private ToolStripMenuItem abriroolStripMenuItem;
         private ToolStripMenuItem guardarComoToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem salirToolStripMenuItem;
         private StatusStrip statusStrip1;
-        private OpenFileDialog OFPEditor;
-        private SaveFileDialog SVFileDialog;
+        private OpenFileDialog OFP;
+        private SaveFileDialog SFD;
         private ToolStripMenuItem guardarToolStripMenuItem1;
         private RichTextBox richTextBox1;
     }
