@@ -132,7 +132,6 @@
             MainMenuStrip = menuStrip1;
             Name = "FrEDitor";
             Text = "fr";
-            Load += this.FrEDitor_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
