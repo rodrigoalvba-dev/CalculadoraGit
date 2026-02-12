@@ -59,6 +59,7 @@
             activosToolStripMenuItem.Name = "activosToolStripMenuItem";
             activosToolStripMenuItem.Size = new Size(75, 24);
             activosToolStripMenuItem.Text = "Activos ";
+            activosToolStripMenuItem.Click += activosToolStripMenuItem_Click;
             // 
             // nuevoToolStripMenuItem
             // 
@@ -111,10 +112,12 @@
             // OFP
             // 
             OFP.Filter = "\"Archivo de Texto\"|*.txt";
+            OFP.FileOk += OFP_FileOk;
             // 
             // SFD
             // 
             SFD.Filter = "\"Archivo de Texto\"|*.txt";
+            SFD.FileOk += SFD_FileOk;
             // 
             // richTextBox1
             // 
