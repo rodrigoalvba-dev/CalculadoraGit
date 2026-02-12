@@ -19,7 +19,8 @@ namespace Calculadora.Formularios
         }
         public bool saved = false;
         public string patch = "";
-
+        string texto = "";
+        
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (OFP.ShowDialog() == DialogResult.OK)
@@ -86,6 +87,26 @@ namespace Calculadora.Formularios
         private void activosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+             texto = richTextBox1.Text;
+            string[] palabra = texto.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            ssTrip.Text = palabra.Length + "palabra";
+            
+        }
+
+       
+        
+
+        private void ssTrip_Click(object sender, EventArgs e)
+        {
+            string[] palabra = texto.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] parrafos=texto.Split(new char[] { '\n' },StringSplitOptions.RemoveEmptyEntries);
+            MessageBox.Show("estadisticas:\n\nPalabras:    " + palabra.Length.ToString ()+
+                "\nLetras" + texto.Length.ToString()+
+                "\nParrafos"+parrafos.Length.ToString(), "contenedor de Palabras");
         }
     }
 }

@@ -40,7 +40,10 @@
             OFP = new OpenFileDialog();
             SFD = new SaveFileDialog();
             richTextBox1 = new RichTextBox();
+            statusStrip2 = new StatusStrip();
+            ssTrip = new ToolStripStatusLabel();
             menuStrip1.SuspendLayout();
+            statusStrip2.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -126,12 +129,31 @@
             richTextBox1.Size = new Size(800, 409);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
+            // 
+            // statusStrip2
+            // 
+            statusStrip2.ImageScalingSize = new Size(20, 20);
+            statusStrip2.Items.AddRange(new ToolStripItem[] { ssTrip });
+            statusStrip2.Location = new Point(0, 402);
+            statusStrip2.Name = "statusStrip2";
+            statusStrip2.Size = new Size(800, 26);
+            statusStrip2.TabIndex = 3;
+            statusStrip2.Text = "statusStrip2";
+            // 
+            // ssTrip
+            // 
+            ssTrip.Name = "ssTrip";
+            ssTrip.Size = new Size(67, 20);
+            ssTrip.Text = "Palabras:";
+            ssTrip.Click += ssTrip_Click;
             // 
             // FrEDitor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(statusStrip2);
             Controls.Add(richTextBox1);
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
@@ -140,6 +162,8 @@
             Text = "fr";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            statusStrip2.ResumeLayout(false);
+            statusStrip2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -158,5 +182,7 @@
         private SaveFileDialog SFD;
         private ToolStripMenuItem guardarToolStripMenuItem1;
         private RichTextBox richTextBox1;
+        private StatusStrip statusStrip2;
+        private ToolStripStatusLabel ssTrip;
     }
 }
